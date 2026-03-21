@@ -1,0 +1,27 @@
+{
+  "name": "nanostyle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishesh-code-22/nano-Tailwind.git"
+  },
+  "keywords": [
+    "css",
+    "utility",
+    "nano-css",
+    "styling"
+  ],
+
+  "author": "Vishesh Kumawat",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Vishesh-code-22/nano-Tailwind/issues"
+  },
+  "homepage": "https://github.com/Vishesh-code-22/nano-Tailwind#readme"
+}
