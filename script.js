@@ -1,26 +1,26 @@
 import styles from "./styles.js";
 
 function run() {
-    const classes = document.querySelectorAll('[class^="nano-"]');
+    const classes = document.querySelectorAll('[class^="mini-"]');
 
     classes.forEach((element) => {
         const elementClass = element.getAttribute("class");
-        const nanoClass = elementClass
+        const miniClass = elementClass
             .split(" ")
-            .filter((cls) => cls.startsWith("nano-"));
-        for (let i = 0; i < nanoClass.length; i++) {
-            if (nanoClass[i] in styles) {
+            .filter((cls) => cls.startsWith("mini-"));
+        for (let i = 0; i < miniClass.length; i++) {
+            if (miniClass[i] in styles) {
                 element.setAttribute(
                     "style",
                     (element.getAttribute("style") || "") +
-                        styles[nanoClass[i]],
+                        styles[miniClass[i]],
                 );
-                element.classList.remove(nanoClass[i]);
+                element.classList.remove(miniClass[i]);
                 if (element.classList.length === 0) {
                     element.removeAttribute("class");
                 }
             } else {
-                console.log("Not a nano class");
+                console.log("Not a mini class");
             }
         }
     });

@@ -1,5 +1,5 @@
 {
-  "name": "nanostyle",
+  "name": "ministyles",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vishesh-code-22/nano-Tailwind.git"
+    "url": "git+https://github.com/Vishesh-code-22/mini-Tailwind.git"
   },
   "keywords": [
     "css",
     "utility",
-    "nano-css",
+    "mini-css",
     "styling"
   ],
 
@@ -21,7 +21,7 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/Vishesh-code-22/nano-Tailwind/issues"
+    "url": "https://github.com/Vishesh-code-22/mini-Tailwind/issues"
   },
-  "homepage": "https://github.com/Vishesh-code-22/nano-Tailwind#readme"
+  "homepage": "https://github.com/Vishesh-code-22/mini-Tailwind#readme"
 }
