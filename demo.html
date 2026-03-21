@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mini-tailwind</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,700;1,300&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: "DM Mono", monospace;
+            }
+            .serif {
+                font-family: "Fraunces", serif;
+            }
+        </style>
+    </head>
+    <body class="mini-bg-gray-900 mini-text-white">
+        <!-- Nav -->
+        <nav
+            class="mini-flex mini-items-center mini-justify-between mini-px-6 mini-py-4 mini-border-b mini-border-gray-700 mini-max-w-page mini-mx-auto"
+        >
+            <span class="mini-font-bold mini-text-sm mini-tracking-wide"
+                >mini-tw</span
+            >
+            <div class="mini-flex mini-items-center mini-gap-6">
+                <a
+                    class="mini-text-xs mini-text-gray-400 mini-no-underline mini-tracking-wide mini-uppercase"
+                    >docs</a
+                >
+                <a
+                    class="mini-text-xs mini-text-gray-400 mini-no-underline mini-tracking-wide mini-uppercase"
+                    >github</a
+                >
+                <span
+                    class="mini-text-xs mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-full mini-px-3 mini-py-1 mini-text-gray-300"
+                    >v0.1</span
+                >
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="mini-max-w-page mini-mx-auto mini-px-6 mini-py-8">
+            <div class="mini-mb-6">
+                <span
+                    class="mini-text-xs mini-uppercase mini-tracking-wide mini-text-gray-400 mini-border mini-border-gray-700 mini-rounded-full mini-px-3 mini-py-1"
+                    >zero dependencies · ~1kb</span
+                >
+            </div>
+
+            <h1
+                class="serif mini-text-white mini-leading-tight mini-mb-6"
+                style="
+                    font-size: clamp(3rem, 9vw, 5.5rem);
+                    font-weight: 700;
+                    letter-spacing: -0.025em;
+                "
+            >
+                inline styles.<br /><span
+                    class="mini-text-gray-500 mini-italic"
+                    style="font-weight: 300"
+                    >no build step.</span
+                >
+            </h1>
+
+            <p
+                class="mini-text-gray-400 mini-text-base mini-leading-relaxed mini-mb-8 mini-max-w-prose"
+            >
+                Write utility classes. Get inline styles. No stylesheet, no
+                compiler, no config file. One
+                <code
+                    class="mini-text-gray-300 mini-bg-gray-800 mini-rounded mini-px-2 mini-py-1 mini-text-sm"
+                    >&lt;script&gt;</code
+                >
+                tag and you're done.
+            </p>
+
+            <!-- Install -->
+            <div
+                class="mini-flex mini-items-center mini-gap-4 mini-mb-12 mini-flex-wrap"
+            >
+                <div
+                    class="mini-flex mini-items-center mini-gap-3 mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-px-4 mini-py-3"
+                >
+                    <span class="mini-text-gray-500 mini-text-sm"
+                        >&lt;script src=</span
+                    >
+                    <span class="mini-text-gray-200 mini-text-sm"
+                        >"script.js"</span
+                    >
+                    <span class="mini-text-gray-500 mini-text-sm"
+                        >&gt;&lt;/script&gt;</span
+                    >
+                </div>
+                <button
+                    class="mini-bg-white mini-text-black mini-text-sm mini-font-medium mini-rounded-lg mini-px-4 mini-py-3 mini-cursor-pointer mini-border-none"
+                >
+                    get started →
+                </button>
+            </div>
+
+            <!-- Stats row -->
+            <div
+                class="mini-flex mini-gap-8 mini-mb-12 mini-border-t mini-border-t-gray-700 mini-pt-8"
+                style="padding-top: 2rem"
+            >
+                <div>
+                    <div
+                        class="serif mini-text-white mini-font-bold mini-leading-tight"
+                        style="font-size: 2.5rem"
+                    >
+                        ~1kb
+                    </div>
+                    <div
+                        class="mini-text-xs mini-text-gray-500 mini-uppercase mini-tracking-wide mini-mt-1"
+                    >
+                        minified
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="serif mini-text-white mini-font-bold mini-leading-tight"
+                        style="font-size: 2.5rem"
+                    >
+                        0
+                    </div>
+                    <div
+                        class="mini-text-xs mini-text-gray-500 mini-uppercase mini-tracking-wide mini-mt-1"
+                    >
+                        dependencies
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="serif mini-text-white mini-font-bold mini-leading-tight"
+                        style="font-size: 2.5rem"
+                    >
+                        ∞
+                    </div>
+                    <div
+                        class="mini-text-xs mini-text-gray-500 mini-uppercase mini-tracking-wide mini-mt-1"
+                    >
+                        frameworks
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div class="mini-mb-12">
+                <p
+                    class="mini-text-xs mini-uppercase mini-tracking-wide mini-text-gray-500 mini-mb-6"
+                >
+                    how it works
+                </p>
+                <div
+                    class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-xl mini-p-6"
+                >
+                    <div
+                        class="mini-flex mini-gap-4 mini-mb-6 mini-flex-wrap mini-items-baseline"
+                    >
+                        <span
+                            class="mini-text-xs mini-text-gray-500 mini-shrink-0"
+                            style="width: 110px"
+                            >you write</span
+                        >
+                        <code
+                            class="mini-text-sm mini-text-gray-200 mini-bg-gray-900 mini-rounded-md mini-px-3 mini-py-2 mini-block"
+                        >
+                            &lt;div class="<span class="mini-text-primary"
+                                >mini-p-4 mini-bg-gray-100 mini-rounded-lg</span
+                            >"&gt;
+                        </code>
+                    </div>
+                    <div
+                        class="mini-flex mini-gap-4 mini-mb-6 mini-flex-wrap mini-items-baseline"
+                    >
+                        <span
+                            class="mini-text-xs mini-text-gray-500 mini-shrink-0"
+                            style="width: 110px"
+                            >resolves to</span
+                        >
+                        <div class="mini-flex mini-gap-2 mini-flex-wrap">
+                            <span
+                                class="mini-text-xs mini-bg-gray-700 mini-text-gray-300 mini-rounded mini-px-2 mini-py-1"
+                                >padding: 1rem</span
+                            >
+                            <span
+                                class="mini-text-xs mini-bg-gray-700 mini-text-gray-300 mini-rounded mini-px-2 mini-py-1"
+                                >background-color: #f3f4f6</span
+                            >
+                            <span
+                                class="mini-text-xs mini-bg-gray-700 mini-text-gray-300 mini-rounded mini-px-2 mini-py-1"
+                                >border-radius: 0.5rem</span
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="mini-flex mini-gap-4 mini-flex-wrap mini-items-center"
+                    >
+                        <span
+                            class="mini-text-xs mini-text-gray-500 mini-shrink-0"
+                            style="width: 110px"
+                            >result</span
+                        >
+                        <div
+                            class="mini-p-4 mini-bg-gray-100 mini-rounded-lg mini-text-sm mini-text-gray-700"
+                        >
+                            your styled element, no stylesheet needed
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilities grid -->
+            <div class="mini-mb-12">
+                <p
+                    class="mini-text-xs mini-uppercase mini-tracking-wide mini-text-gray-500 mini-mb-6"
+                >
+                    what's included
+                </p>
+                <div
+                    class="mini-grid mini-gap-2"
+                    style="
+                        grid-template-columns: repeat(
+                            auto-fit,
+                            minmax(200px, 1fr)
+                        );
+                    "
+                >
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Spacing
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            padding, margin, gap — scales 0 through 8 with
+                            x/y/t/b shorthands
+                        </div>
+                    </div>
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Colors
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            background + text — full gray ramp, white, black,
+                            primary, danger, success
+                        </div>
+                    </div>
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Typography
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            size xs→3xl, weight, alignment, italic, uppercase,
+                            tracking, leading
+                        </div>
+                    </div>
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Borders
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            border width, color variants, t/b edges, radius none
+                            through full
+                        </div>
+                    </div>
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Layout
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            flex, grid, display, align, justify, wrap, gap,
+                            w-full, overflow
+                        </div>
+                    </div>
+                    <div
+                        class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-lg mini-p-5"
+                    >
+                        <div
+                            class="mini-text-sm mini-font-medium mini-text-white mini-mb-2"
+                        >
+                            Extend
+                        </div>
+                        <div
+                            class="mini-text-xs mini-text-gray-500 mini-leading-relaxed"
+                        >
+                            add any key to the
+                            <code class="mini-text-gray-300">styles</code>
+                            object — it resolves instantly
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live buttons -->
+            <div class="mini-mb-12">
+                <p
+                    class="mini-text-xs mini-uppercase mini-tracking-wide mini-text-gray-500 mini-mb-6"
+                >
+                    live demo
+                </p>
+                <div
+                    class="mini-bg-gray-800 mini-border mini-border-gray-700 mini-rounded-xl mini-p-6"
+                >
+                    <code
+                        class="mini-block mini-text-xs mini-text-gray-400 mini-leading-relaxed mini-mb-6"
+                        style="white-space: pre"
+                        >&lt;button class="<span class="mini-text-primary"
+                            >mini-px-4 mini-py-2 mini-bg-primary mini-text-white
+                            mini-rounded-md mini-font-medium mini-text-sm</span
+                        >"&gt; Get started &lt;/button&gt;</code
+                    >
+                    <div
+                        class="mini-flex mini-gap-3 mini-flex-wrap mini-items-center"
+                    >
+                        <button
+                            class="mini-px-4 mini-py-2 mini-bg-primary mini-text-white mini-rounded-md mini-font-medium mini-text-sm mini-cursor-pointer mini-border-none"
+                        >
+                            Get started
+                        </button>
+                        <button
+                            class="mini-px-4 mini-py-2 mini-bg-gray-700 mini-text-gray-200 mini-rounded-md mini-font-medium mini-text-sm mini-cursor-pointer mini-border-none"
+                        >
+                            Secondary
+                        </button>
+                        <button
+                            class="mini-px-4 mini-py-2 mini-bg-danger mini-text-white mini-rounded-md mini-font-medium mini-text-sm mini-cursor-pointer mini-border-none"
+                        >
+                            Danger
+                        </button>
+                        <button
+                            class="mini-px-4 mini-py-2 mini-bg-success mini-text-white mini-rounded-full mini-font-medium mini-text-sm mini-cursor-pointer mini-border-none"
+                        >
+                            Success
+                        </button>
+                        <button
+                            class="mini-px-4 mini-py-2 mini-border mini-border-gray-700 mini-text-gray-300 mini-rounded-md mini-font-medium mini-text-sm mini-cursor-pointer"
+                            style="background: transparent"
+                        >
+                            Ghost
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div
+                class="mini-border-t mini-border-t-gray-700 mini-pt-8 mini-flex mini-justify-between mini-items-center mini-flex-wrap mini-gap-4"
+                style="padding-top: 2rem"
+            >
+                <span class="mini-text-xs mini-text-gray-500"
+                    >mini-tailwind — utility classes, inline results.</span
+                >
+                <span class="mini-text-xs mini-text-gray-500 mini-opacity-50"
+                    >resolves on DOMContentLoaded · extend the styles
+                    object</span
+                >
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
