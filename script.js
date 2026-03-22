@@ -1,8 +1,8 @@
 import styles from "./styles.js";
 
 function run() {
-    const classes = document.querySelectorAll('[class^="mini-"]');
-
+    const classes = document.querySelectorAll('[class*="mini-"]');
+    
     classes.forEach((element) => {
         const elementClass = element.getAttribute("class");
         const miniClass = elementClass
@@ -20,14 +20,27 @@ function run() {
                     element.removeAttribute("class");
                 }
             } else {
-                console.log("Not a mini class");
+                console.log(`${miniClass[i]} is not a mini class`);
             }
         }
     });
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", run);
-} else {
+function init() {
     run();
+
+    const observer = new MutationObserver(run);
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class"],
+    })
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
 }
